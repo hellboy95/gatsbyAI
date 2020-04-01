@@ -12,13 +12,13 @@ import "./bootstrap.min.css"
 import "./layout.css"
 
 import Navbar from "./global/Navbar"
- 
+
 const Layout = ({ children }) => (
 
   <>
-  <Navbar />
-  
-  {children}</>
+    <Navbar />
+    
+    {children}</>
 
 )
 Layout.propTypes = {
