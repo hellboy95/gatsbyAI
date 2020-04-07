@@ -11,7 +11,12 @@ import Info from "../components/Home/Info"
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <Background img={data.image.childImageSharp.fluid} title="Avinash Industries" styleClass="default-background"/>
+    <Background className="col-10 col-sm-10" img={data.img.childImageSharp.fluid} styleClass="default-background gradient:after">
+      <div className="gradient">
+      Avinash Industries
+      </div>
+        
+      </Background>
     <Info>
     </Info>
   </Layout>
@@ -21,10 +26,10 @@ const IndexPage = ({data}) => (
 
 export const query = graphql`
 {
-  image: file(relativePath: {eq: "preethi.jpg"}) {
+  img: file(relativePath: {eq: "preethi.jpeg"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid_tracedSVG
+      fluid(quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
