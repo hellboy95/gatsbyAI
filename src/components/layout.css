@@ -23,16 +23,15 @@ h1,h2,h3,h4,h5,h6{
   color: var(--mainYellow);
 }
 
-.default-background{
+.default-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(900deg, black, transparent);
-  position: relative;
-  opacity: 60;
+  background: linear-gradient(rgb(10, 10, 10), rgba(10, 7, 1, 0.32));
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .gradient{
