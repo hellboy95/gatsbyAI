@@ -6,7 +6,6 @@ import BackgroundSlider from 'gatsby-image-background-slider';
 export default function Slider() {
     return (
       <BackgroundSlider 
-      query={img}
       initDelay={2} // delay before the first transition (if left at 0, the first image will be skipped initially)
       transition={4} // transition duration between images
       duration={8} // how long an image is shown
