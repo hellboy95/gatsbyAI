@@ -6,22 +6,30 @@ import BackgroundSlider from 'gatsby-image-background-slider';
 export default function Slider() {
     return (
       <BackgroundSlider 
-      initDelay={2} // delay before the first transition (if left at 0, the first image will be skipped initially)
-      transition={4} // transition duration between images
-      duration={8} // how long an image is shown
-      // specify images to include (and their order) according to `relativePath`
-      images={["preethi.jpeg", "butterfly.png"]} 
-
-      // pass down standard element props
+      query = {useStaticQuery(graphql`
+                  query{
+                    backgrounds: allFile(filter: {sourceInstanceName: {eq: "images"}}) {
+                      nodes{
+                        relativePath
+                        childImageSharp {
+                          fluid(maxWidth: 2000, quality: 100) {
+                            ...GatsbyImageSharpFluid_withWebp
+                          }
+                        }
+                      }
+                    }
+                  }
+                `)}
+      initDelay={2}
+      transition={4}
+      duration={5}
+      images={["kitchen1.jpg","kitchen.jpeg","preethi.jpeg", "butterfly.jpg"]}
       style={{
-        transform: "rotate(-2deg) scale(.9)",
-      }}           
-    > 
-      {/* Captions in sync with background images*/}
-      <div>Woof</div>
-      <div>Meow</div>
-      
-    </BackgroundSlider>
+        top: "105px",
+        maxHeight: "50vh",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}  />
         
     )
 }

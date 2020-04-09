@@ -8,6 +8,8 @@ import Background from "../components/global/Background"
 import Info from "../components/Home/Info"
 import Slider from "../components/Home/Slider"
 import BackgroundSlider from "gatsby-image-background-slider"
+import Characteristics from "../components/Home/Characteristics"
+
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -50,40 +52,16 @@ const IndexPage = ({data}) => (
               </div>   
           </div>
       
-    <Info/>
+    <Characteristics/>
     <Info/> 
+
+    
     
   </Layout>
 
   
 )
 
-/*export const query = graphql`
-{
-  img: file(relativePath: {eq: "preethi.jpeg"}) {
-    childImageSharp {
-      fluid(quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-  }
-}
-`; */
 
-/*export const query = graphql`
-{
-  backgrounds: allFile(filter: {sourceInstanceName: {eq: "images"}}) {
-     edges{
-      node {
-       relativePath
-        childImageSharp {
-          fluid{
-            ...GatsbyImageSharpFluid
-          }
-       }
-     }
-    }
-  }
-}`;*/
 
 export default IndexPage
