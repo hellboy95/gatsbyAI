@@ -19,8 +19,7 @@ const IndexPage = ({data}) => (
         
       </Background> */}
       <div className="default-background">
-          <div className="row">
-          
+            <div className="container">   
                   <BackgroundSlider 
                     query = {useStaticQuery(graphql`
                                 query{
@@ -38,20 +37,20 @@ const IndexPage = ({data}) => (
                               `)}
                     initDelay={2}
                     transition={4}
-                    duration={8}
-                    images={["preethi.jpeg", "butterfly.png"]}
+                    duration={5}
+                    images={["kitchen1.jpg","kitchen.jpeg","preethi.jpeg", "butterfly.jpg"]}
                     style={{
                       top: "105px",
+                      maxHeight: "50vh",
                       backgroundSize: "cover",
                       backgroundPosition: "center"
                     }}  />
-                    <h1 className="title text-white text-center text-uppercase display-4 font-weight-bold">Avinash Industries</h1>
-     
+                      <h1 className="heroheader title text-white text-center text-uppercase display-4 font-weight-bold ">Avinash Industries</h1>
+                      <p className="col-10 col-sm-8 mx-auto text-center eggwhite" > We are Original Equipment Manufacturers (OEM) building high-quality products for the leading kitchen appliance brands in the nation.</p>
+              </div>   
           </div>
-     
-      </div>
       
-
+    <Info/>
     <Info/> 
     
   </Layout>

@@ -12,14 +12,17 @@ import "./bootstrap.min.css"
 import "./layout.css"
 
 import Navbar from "./global/Navbar"
+import Footer from "./global/Footer"
 
 const Layout = ({ children }) => (
 
   <>
     <Navbar />
     
-    {children}</>
+    {children}
 
+    <Footer/>
+  </>
 )
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

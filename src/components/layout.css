@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .default-background {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +47,9 @@ h1,h2,h3,h4,h5,h6{
   background: linear-gradient(900deg, black, transparent);
 }
 
+.navbar-ex{
+  background-color: #292929
+}
 .btn-yellow{
   color: var(--mainYellow);
   border-color: var(--mainYellow);
@@ -55,4 +58,26 @@ h1,h2,h3,h4,h5,h6{
 .btn-yellow:hover {
   color: var(--mainBrown);
   background: var(--mainYellow);
+}
+
+.eggwhite{
+  color: #dcdcdc;
+  font-family: 'OpenSans_Light'; 
+  font-size: 21px; 
+  line-height: 28px; 
+  margin-bottom: 20px;
+}
+
+.heroheader{
+  font-family: Gotham-Medium;
+  font-family: Gotham_Medium; 
+  font-size: 50px; 
+  line-height: 36px; 
+  letter-spacing: 1.5px; 
+  margin-bottom: 20px;
+}
+
+.footer{
+  background: var(--mainDark) ;
+
 }
