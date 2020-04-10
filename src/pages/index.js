@@ -4,12 +4,12 @@ import { Link ,graphql, useStaticQuery} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Background from "../components/global/Background"
+
 import Info from "../components/Home/Info"
-import Slider from "../components/Home/Slider"
+
 import BackgroundSlider from "gatsby-image-background-slider"
 import Characteristics from "../components/Home/Characteristics"
-
+import Test from "../components/Home/Test"
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -54,9 +54,8 @@ const IndexPage = ({data}) => (
       
     <Characteristics/>
     <Info/> 
-
     
-    
+    <Test/>
   </Layout>
 
   

@@ -4,12 +4,12 @@ import Title from "../global/Title"
 
 export default function Info({children}) {
     return (
-        <section className="py-5">
+        <section className=" test py-5">
             <div className="container">
                <Title title="Our Story"/>
                 <div className="row">
                     <div className="col-10 col-sm-8 mx-auto text-center">
-                        <p className="lead text-muted mb-5">
+                        <p className="lead text-dark mb-5">
                             We are a family owned OEM manufacturing company producing high quality products for nation leading kitchen applicance brands. Drawing from 30 years of manufacturing experience, we bring
                             unparalled technical expertise and proven management practices to deliver the best results. 
                         </p>

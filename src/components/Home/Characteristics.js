@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery,graphql } from "gatsby"
-import Title from '../global/Title'
 import Img from "gatsby-image"
 
 const Characteristics  = () => (
@@ -14,7 +13,7 @@ const Characteristics  = () => (
                       summary
                       description
                       quality{
-                        fixed(width:50, height: 50){
+                        fixed(width:100, height: 100){
                           ...GatsbyContentfulFixed_tracedSVG
                         }
                       }
