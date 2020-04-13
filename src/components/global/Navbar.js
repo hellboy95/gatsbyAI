@@ -19,7 +19,22 @@ state ={
             id:2,
             path:'/about',
             text:'About'
-        }
+        },
+        {
+            id:3,
+            path:'/Product',
+            text:'Product'
+        },
+        {
+            id:4,
+            path:'/Infra',
+            text:'Infrastructure'
+        },
+        {
+            id:5,
+            path:'/Contact',
+            text:'Contact'
+        },
     ]
 
 };
@@ -29,7 +44,7 @@ navbarHandler = () => {
 };
     render() {
         return (
-            <nav className="navbar navbar-expand-sm navbar-light navbar-ex ">  
+            <nav className="navbar navbar-expand-lg navbar-light navbar-ex ">  
                 <Link to="/" className="navbar brand" >
                     <img src={logo} alt="logo"/>
                 </Link>
@@ -37,11 +52,11 @@ navbarHandler = () => {
                     <span className="navbar-toggler-icon"/>
                 </button>
                 <div className={this.state.css}>
-                    <ul className="navbar-nav mx-auto">
+                    <ul className="navbar-nav">
                         {
                             this.state.links.map( link =>{
                                 return(
-                                    <li key={link.id} className="nav-item">
+                                    <li key={link.id} className="nav-item px-5">
                                         <Link to={link.path} className="nav-link text-uppercase text-white">
                                             {link.text}
                                         </Link>

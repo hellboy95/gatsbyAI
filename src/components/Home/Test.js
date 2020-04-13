@@ -1,37 +1,14 @@
 import React from 'react'
-import { StaticQuery,graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Test  = () => (
-
-    <StaticQuery
-    query={graphql`
-            {
-                test: allContentfulTest(sort: {fields: clientName, order: DESC}){
-                    edges {
-                      node {
-                        id
-                        clientTestimonial
-                        clientName
-                        client{
-                          fixed(width: 750, height: 210) {
-                            ...GatsbyContentfulFixed_tracedSVG
-                          }
-                        }
-                      }
-                    }
-                  }
-            }`
-    }
-
-    render={data =>(
-      <section className="py-5">
+export default function Test({que}) {
+    return (
+        <section className="py-5">
           <div className="container">
-            <div className="row">
-              {data.test.edges.map(({ node }) => {
-                  console.log(data);
+              {que.test.edges.map(({ node }) => {
+                  console.log(que);
                   
-                if(node.clientName == "preethi")
+                if(node.clientName === "preethi")
                 {
                     return(
                     <div className="row">
@@ -39,7 +16,7 @@ const Test  = () => (
                               <div>
                                     <Img fixed={node.client.fixed} />
                               </div>
-                              <div className="flex-grow-1 px-6 py-5">
+                              <div className="flex-grow-1 py-5 ml-5">
                                     <p className="aqua">{node.clientTestimonial}</p>
                               </div>
                     
@@ -48,16 +25,16 @@ const Test  = () => (
       
                       );
                 }
-                if(node.clientName == "butterfly")
+                if(node.clientName === "butterfly")
                 {
                     return(
                     <div className="row">
                         <div key={node.id} className="col col-sm-auto d-flex">
-                              <div className="flex-grow-1 px-6 py-5">
+                              <div className="flex-grow-1 py-5 mr-5">
                                     <p className="aqua">{node.clientTestimonial}</p>
                               </div>
                               <div>
-                                    <Img fixed={node.client.fixed} />
+                                    <Img fixed={node.client.fixed}/>
                               </div>
                              
                     
@@ -69,14 +46,8 @@ const Test  = () => (
                 }
                 
               })} 
-              </div>
           </div>
 
       </section>
-    )}
-/>
-)
-
-
-
-export default Test;
+    )
+}
