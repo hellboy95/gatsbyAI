@@ -15,8 +15,7 @@ const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
       <div className="default-background">
-            <div className="container">   
-                  <BackgroundSlider 
+              <BackgroundSlider 
                     query = {data}
                     initDelay={2}
                     transition={4}
@@ -24,13 +23,20 @@ const IndexPage = ({data}) => (
                     images={["kitchen1.jpg","bg1.jpg","bg2.jpg","kitchen.jpeg","preethi.jpeg", "butterfly.jpg"]}
                     style={{
                       top: "105px",
-                      maxHeight: "50vh",
+                      maxHeight: "100vh",
                       backgroundSize: "cover",
                       backgroundPosition: "center"
                     }}  />
-                      <h1 className="heroheader title text-white text-center text-uppercase display-4 font-weight-bold ">Avinash Industries</h1>
-                      <p className="col-10 col-sm-8 mx-auto text-center eggwhite" > We are Original Equipment Manufacturers (OEM) building high-quality products for the leading kitchen appliance brands in the nation.</p>
-              </div>   
+                <div>
+                    <h1 className="heroheader text-uppercase display-4 font-weight-bold mt-5 ">Avinash Industries</h1>
+
+                </div>
+                <div>
+                    <p className="col-10 col-sm-8 mx-auto text-center eggwhite" > We are Original Equipment Manufacturers (OEM) building high-quality products for the leading kitchen appliance brands in the nation.</p>
+              
+                </div>
+                      
+                     
           </div>
 
       

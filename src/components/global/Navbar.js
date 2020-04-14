@@ -44,7 +44,7 @@ navbarHandler = () => {
 };
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light navbar-ex ">  
+            <nav className="navbar navbar-expand-lg navbar-light ">  
                 <Link to="/" className="navbar brand" >
                     <img src={logo} alt="logo"/>
                 </Link>
@@ -57,7 +57,7 @@ navbarHandler = () => {
                             this.state.links.map( link =>{
                                 return(
                                     <li key={link.id} className="nav-item px-5">
-                                        <Link to={link.path} className="nav-link text-uppercase text-white">
+                                        <Link to={link.path} className="nav-link text-uppercase text-dark">
                                             {link.text}
                                         </Link>
                                     </li>

@@ -24,11 +24,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .default-background {
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(rgb(10, 10, 10), rgba(10, 7, 1, 0.1));
+  justify-content: flex-start;
+  background: linear-gradient(-180deg, black, transparent);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -71,10 +72,13 @@ h1,h2,h3,h4,h5,h6{
 .heroheader{
   font-family: Gotham-Medium;
   font-family: Gotham_Medium; 
+  color: var(--mainWhite);
   font-size: 50px; 
   line-height: 36px; 
   letter-spacing: 1.5px; 
   margin-bottom: 20px;
+  
+  
 }
 
 .footer{
