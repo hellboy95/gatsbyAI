@@ -8,23 +8,24 @@ import SEO from "../components/seo"
 import Profile from "../components/About/Profile"
 import Info from "../components/Home/Info"
 import Characteristics from "../components/Home/Characteristics"
-
+import YouTube from "../components/About/YouTube"
 
 const AboutPage = ({data}) => (
   <Layout>
     <SEO title="About" />
     <div className="mainContentArea">
-        <div className="container">
+        <div className="wrapper">
             <div className="row">
-                <div className="col-md-3 leftcol" id="leftcol">
-                    <div className="sticky-top leftSticky">
+                <div className="col-md-3" id="leftcol">
+                    <div className="sticky-top leftCol leftSticky">
                     <ul>
                         <li><a href="#profile">Company Profile</a></li>
                         <li><a href="#Team">Management Team</a></li>
                     </ul>
                     </div>
                 </div>
-                <div className="col-md-9" id="rightcol">
+                <div className="col-md-9 mx-auto" id="rightcol">
+                    <YouTube className="youtube" /> {/* Got the info for custom Youtube responsive component from https://www.youtube.com/watch?v=EGZS58z4DSQ */}
                     <Profile id="profile"/>
                     <Characteristics que={data} />
                     <Info id="Team"/>
