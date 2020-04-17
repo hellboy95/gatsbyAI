@@ -9,6 +9,8 @@ import Profile from "../components/About/Profile"
 import Info from "../components/Home/Info"
 import Characteristics from "../components/Home/Characteristics"
 import YouTube from "../components/About/YouTube"
+import Banner from "../components/About/Banner"
+import Timeline from "../components/About/Timeline"
 
 const AboutPage = ({data}) => (
   <Layout>
@@ -16,25 +18,20 @@ const AboutPage = ({data}) => (
     <div className="mainContentArea">
         <div className="wrapper">
             <div className="row">
-                <div className="col-md-3" id="leftcol">
-                    <div className="sticky-top leftCol leftSticky">
-                    <ul>
-                        <li><a href="#profile">Company Profile</a></li>
-                        <li><a href="#Team">Management Team</a></li>
+                <div className="col-lg-2" id="leftcol">
+                    <div className="sticky-top leftCol ">
+                    <ul >
+                        <li ><a href="#profile" className="leftSticky">Company Profile</a></li>
+                        <li><a href="#Team" className="leftSticky">Management Team</a></li>
                     </ul>
                     </div>
                 </div>
                 <div className="col-md-9 mx-auto" id="rightcol">
+                    <Banner header="Company Profile" id="profile"/>
                     <YouTube className="youtube" /> {/* Got the info for custom Youtube responsive component from https://www.youtube.com/watch?v=EGZS58z4DSQ */}
-                    <Profile id="profile"/>
-                    <Characteristics que={data} />
+                    <Profile/>
+                    <Timeline que={data} />
                     <Info id="Team"/>
-                    <Info />
-                    <Info  />
-                    <Info />
-                    <Info  />
-
-
                 </div>
             </div>
         </div>
@@ -49,38 +46,13 @@ const AboutPage = ({data}) => (
 
 export const query = graphql`
 {
-  backgrounds: allFile(filter: {sourceInstanceName: {eq: "images"}}) {
-    nodes{
-      relativePath
-      childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-  characteristics:allContentfulCharacteristics{
+  timeline:allContentfulTimeline(sort: {fields: year, order: ASC}){
     edges{
       node{
-        id
-        summary
-        description
-        quality{
-          fixed(width:100, height: 100){
-            ...GatsbyContentfulFixed_tracedSVG
-          }
-        }
-      }
-    }
-  }
-  test: allContentfulTest(sort: {fields: clientName, order: DESC}){
-    edges {
-      node {
-        id
-        clientTestimonial
-        clientName
-        client{
-          fixed(width: 200, height: 210) {
+        year
+        yearSummary
+        yearPhoto{
+          fixed(width:200, height: 200){
             ...GatsbyContentfulFixed_tracedSVG
           }
         }

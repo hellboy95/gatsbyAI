@@ -94,16 +94,23 @@ h1,h2,h3,h4,h5,h6{
   background: var(--mainGrey);
 }
 
+.banner{
+  background: radial-gradient(#00000012, #00000094);
+}
+
 .leftCol{
   display: flex;
-  background: var(--mainGrey);
-  height: 20vh;
-  margin-left: 30px;
+  background: radial-gradient(#00000014, #0000006b);
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .leftSticky{
-  justify-content: center;
-  align-items: center;
+  margin:0 0 50px 0;
+  color: #080808;
+  border-bottom: outset;
+  
 }
 
 .sticky-top{
@@ -115,22 +122,24 @@ h1,h2,h3,h4,h5,h6{
   overflow: hidden;
   position: relative;
   width:100%;
+  margin: 2rem auto;
+  margin-left: 20%;
+  margin-bottom: -2rem ;
 }
 
 .video-container::after {
-  padding-top: 56.25%;
+  padding-top: 40%;
   display: block;
-  content: '';
+  content: "";
 }
 
 .video-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 80%;
 }
 
 .youtube{
-  justify-items: center;
+  justify-self: center;
+  
 }

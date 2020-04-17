@@ -4,9 +4,8 @@ import Title from "../global/Title"
 
 export default function Profile() {
     return (
-        <section className="test py-5">
+        <section className="test py-4">
             <div className="container">
-               <Title title="Company Profile"/>
                 <div className="row">
                     <div className="col-10 col-sm-8 mx-auto">
                         <p className="text-dark">
