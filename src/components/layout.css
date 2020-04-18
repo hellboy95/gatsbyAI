@@ -35,6 +35,10 @@ h1,h2,h3,h4,h5,h6{
   background-attachment: fixed;
 }
 
+.about-background{
+  background-color: cornsilk;
+
+}
 .gradient{
   display: -webkit-flex; /* safari */
   display: flex;
