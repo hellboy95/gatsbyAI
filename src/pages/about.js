@@ -15,27 +15,25 @@ import Timeline from "../components/About/Timeline"
 const AboutPage = ({data}) => (
   <Layout>
     <SEO title="About" />
-    <div className="mainContentArea">
-        <div className="wrapper">
+        <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-2" id="leftcol">
                     <div className="sticky-top leftCol ">
-                    <ul >
-                        <li ><a href="#profile" className="leftSticky">Company Profile</a></li>
-                        <li><a href="#Team" className="leftSticky">Management Team</a></li>
-                    </ul>
+                        <ul >
+                            <li ><a href="#profile" className="leftSticky">Company Profile</a></li>
+                            <li><a href="#Team" className="leftSticky">Management Team</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div className="col-md-9 mx-auto" id="rightcol">
+                <div className="col-lg-10 mx-auto" id="rightcol">
                     <Banner header="Company Profile" id="profile"/>
                     <YouTube className="youtube" /> {/* Got the info for custom Youtube responsive component from https://www.youtube.com/watch?v=EGZS58z4DSQ */}
-                    <Profile/>
+                    <Profile />
                     <Timeline que={data} />
-                    <Info id="Team"/>
+                    <Info id="Team"/>  
                 </div>
             </div>
         </div>
-    </div>
     
   </Layout>
 

@@ -4,10 +4,10 @@ import Title from "../global/Title"
 
 export default function Profile() {
     return (
-        <section className="test py-4">
-            <div className="container">
+      
+            <div className="container-fluid test py-4">
                 <div className="row">
-                    <div className="col-10 col-sm-8 mx-auto">
+                    <div className="col-sm-10 mx-auto">
                         <p className="text-dark">
                         Promoted by Shri K.A.Palaniappan and his three sons in 1985 at Tiruchirapalli, we started manufacturing metal articles for domestic & industrial kitchens, large canteens, worship places, government free schemes, etc.,.
 
@@ -23,7 +23,7 @@ The team has great appetite to take up challenging projects and deliver services
                 </div>
             </div>
 
-        </section>
+   
     )
 }
 
