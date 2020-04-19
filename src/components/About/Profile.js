@@ -5,7 +5,7 @@ import Title from "../global/Title"
 export default function Profile() {
     return (
       
-            <div className="container-fluid test py-4">
+            <div className="container-fluid py-4">
                 <div className="row">
                     <div className="col-sm-10 mx-auto">
                         <p className="text-dark">
