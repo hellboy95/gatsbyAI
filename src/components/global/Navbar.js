@@ -32,7 +32,7 @@ state ={
         },
         {
             id:5,
-            path:'/Contact',
+            path:'/contact',
             text:'Contact'
         },
     ]
