@@ -44,30 +44,34 @@ navbarHandler = () => {
 };
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light ">  
-                <Link to="/" className="navbar brand" >
-                    <img src={logo} alt="logo"/>
-                </Link>
-                <button className="navbar-toggler" type="button" onClick={this.navbarHandler}>
-                    <span className="navbar-toggler-icon"/>
-                </button>
-                <div className={this.state.css}>
-                    <ul className="navbar-nav">
-                        {
-                            this.state.links.map( link =>{
-                                return(
-                                    <li key={link.id} className="nav-item px-5">
-                                        <Link to={link.path} className="nav-link text-uppercase text-dark">
-                                            {link.text}
-                                        </Link>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
+            <div className="container-fluid">
+                
+                <nav className="navbar navbar-expand-lg navbar-light ">  
+                        <Link to="/" className="navbar brand" >
+                            <img src={logo} alt="logo"/>
+                        </Link>
+                        <button className="navbar-toggler" type="button" onClick={this.navbarHandler}>
+                            <span className="navbar-toggler-icon"/>
+                        </button>
+                        <div className={this.state.css}>
+                            <ul className="navbar-nav mx-auto">
+                                {
+                                    this.state.links.map( link =>{
+                                        return(
+                                            <li key={link.id} className="nav-item px-5">
+                                                <Link to={link.path} className="nav-link text-uppercase text-dark">
+                                                    {link.text}
+                                                </Link>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
 
             </nav>
+            </div>
+           
         )
     }
 }

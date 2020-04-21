@@ -35,6 +35,10 @@ h1,h2,h3,h4,h5,h6{
   background-attachment: fixed;
 }
 
+.about-background{
+  background-color: cornsilk;
+
+}
 .gradient{
   display: -webkit-flex; /* safari */
   display: flex;
@@ -60,6 +64,8 @@ h1,h2,h3,h4,h5,h6{
   color: var(--mainBrown);
   background: var(--mainYellow);
 }
+
+
 
 .eggwhite{
   color: #dcdcdc;
@@ -92,5 +98,57 @@ h1,h2,h3,h4,h5,h6{
 
 .test{
   background: var(--mainGrey);
+}
+
+.banner{
+  background: radial-gradient(#00000012, #00000094);
+}
+
+.leftCol{
+  display: flex;
+  background: radial-gradient(#00000014, #0000006b);
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftSticky{
+  margin:0 0 50px 0;
+  color: #080808;
+  border-bottom: outset;
+  
+}
+
+.sticky-top{
+  top:15%
+}
+
+/* youtube */
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width:100%;
+  margin: 2rem auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.video-container::after {
+  padding-top: 40%;
+  display: block;
+  content: "";
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.youtube{
+  justify-self: center;
+  
 }
 

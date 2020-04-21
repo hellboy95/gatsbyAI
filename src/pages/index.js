@@ -14,7 +14,7 @@ import Test from "../components/Home/Test"
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-      <div className="default-background">
+      <div className="container-fluid default-background">
               <BackgroundSlider 
                     query = {data}
                     initDelay={2}
