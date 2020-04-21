@@ -5,69 +5,72 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
+import Profile from "../components/About/Profile"
 import Info from "../components/Home/Info"
-
-import BackgroundSlider from "gatsby-image-background-slider"
 import Characteristics from "../components/Home/Characteristics"
-import Test from "../components/Home/Test"
-
+import YouTube from "../components/About/YouTube"
+import Banner from "../components/About/Banner"
+import Timeline from "../components/About/Timeline"
+import Mission from "../components/About/Mission"
+import Team from "../components/About/Team"
+import NavbarAbout from "../components/About/NavbarAbout"
 const AboutPage = ({data}) => (
   <Layout>
     <SEO title="About" />
-      <div className="default-background">
-              <BackgroundSlider 
-                    query = {data}
-                    initDelay={2}
-                    transition={4}
-                    duration={5}
-                    images={["kitchen1.jpg","bg1.jpg","bg2.jpg","kitchen.jpeg","preethi.jpeg", "butterfly.jpg"]}
-                    style={{
-                      top: "105px",
-                      maxHeight: "100vh",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center"
-                    }}  />
-                <div>
-                    <h1 className="heroheader text-uppercase display-4 font-weight-bold mt-5 ">Avinash Industries</h1>
-
+        <div className="container-fluid">
+            <div className="row">
+                {/*} <div className="col-lg-2" id="leftcol">
+                    <div className="sticky-top leftCol ">
+                        <ul >
+                            <li ><a href="#profile" className="leftSticky">Company Profile</a></li>
+                            <li><a href="#Team" className="leftSticky">Management Team</a></li>
+                        </ul>
+                    </div>
+                </div> */}
+                <div className="col-lg-10 mx-auto" id="rightcol">
+                    <NavbarAbout/>
+                    <Banner header="Company Profile" id="profile"/>
+                    <YouTube className="youtube" /> {/* Got the info for custom Youtube responsive component from https://www.youtube.com/watch?v=EGZS58z4DSQ */}
+                    <Profile />
+                    <Timeline que={data} />
+                    <Mission id="mission"/> 
+                    
+                    
+                    <Banner header="Management Team" id="team"/>
+                    <Team que={data} />
+                    
                 </div>
-                <div>
-                    <p className="col-10 col-sm-8 mx-auto text-center eggwhite" > We are Original Equipment Manufacturers (OEM) building high-quality products for the leading kitchen appliance brands in the nation.</p>
-              
-                </div>
-                      
-                     
-          </div>
-
-      
-    <Characteristics que={data}/>
-    <Info/> 
+            </div>
+        </div>
     
-    <Test que={data}/>
   </Layout>
 
   
 )
 
+
+
 export const query = graphql`
 {
-  backgrounds: allFile(filter: {sourceInstanceName: {eq: "images"}}) {
-    nodes{
-      relativePath
-      childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+  timeline:allContentfulTimeline(sort: {fields: year, order: ASC}){
+    edges{
+      node{
+        year
+        yearSummary
+        yearPhoto{
+          fixed(width:200, height: 200){
+            ...GatsbyContentfulFixed_tracedSVG
+          }
         }
       }
     }
   }
-  characteristics:allContentfulCharacteristics{
+  team:allContentfulTeam{
     edges{
       node{
-        id
-        summary
-        description
-        quality{
+        name1
+        role
+        memberPhoto{
           fixed(width:100, height: 100){
             ...GatsbyContentfulFixed_tracedSVG
           }
@@ -75,20 +78,7 @@ export const query = graphql`
       }
     }
   }
-  test: allContentfulTest(sort: {fields: clientName, order: DESC}){
-    edges {
-      node {
-        id
-        clientTestimonial
-        clientName
-        client{
-          fixed(width: 200, height: 210) {
-            ...GatsbyContentfulFixed_tracedSVG
-          }
-        }
-      }
-    }
-  }
+  
 }
 `;
 
