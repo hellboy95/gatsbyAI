@@ -65,6 +65,8 @@ h1,h2,h3,h4,h5,h6{
   background: var(--mainYellow);
 }
 
+
+
 .eggwhite{
   color: #dcdcdc;
   font-family: 'OpenSans_Light'; 
@@ -149,3 +151,4 @@ h1,h2,h3,h4,h5,h6{
   justify-self: center;
   
 }
+

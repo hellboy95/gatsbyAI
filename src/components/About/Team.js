@@ -1,8 +1,6 @@
 import React from 'react'
 import Img from "gatsby-image"
 
-
-
 export default function Team({que}) {
     return (
             <div className="container-fluid py-3">

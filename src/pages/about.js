@@ -13,7 +13,7 @@ import Banner from "../components/About/Banner"
 import Timeline from "../components/About/Timeline"
 import Mission from "../components/About/Mission"
 import Team from "../components/About/Team"
-
+import NavbarAbout from "../components/About/NavbarAbout"
 const AboutPage = ({data}) => (
   <Layout>
     <SEO title="About" />
@@ -28,11 +28,14 @@ const AboutPage = ({data}) => (
                     </div>
                 </div> */}
                 <div className="col-lg-10 mx-auto" id="rightcol">
+                    <NavbarAbout/>
                     <Banner header="Company Profile" id="profile"/>
                     <YouTube className="youtube" /> {/* Got the info for custom Youtube responsive component from https://www.youtube.com/watch?v=EGZS58z4DSQ */}
-                    <Mission /> 
                     <Profile />
                     <Timeline que={data} />
+                    <Mission id="mission"/> 
+                    
+                    
                     <Banner header="Management Team" id="team"/>
                     <Team que={data} />
                     

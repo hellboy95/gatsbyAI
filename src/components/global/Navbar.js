@@ -44,7 +44,8 @@ navbarHandler = () => {
 };
     render() {
         return (
-            <div className="container">
+            <div className="container-fluid">
+                
                 <nav className="navbar navbar-expand-lg navbar-light ">  
                         <Link to="/" className="navbar brand" >
                             <img src={logo} alt="logo"/>
@@ -53,7 +54,7 @@ navbarHandler = () => {
                             <span className="navbar-toggler-icon"/>
                         </button>
                         <div className={this.state.css}>
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav mx-auto">
                                 {
                                     this.state.links.map( link =>{
                                         return(

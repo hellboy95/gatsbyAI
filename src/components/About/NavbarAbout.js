@@ -3,24 +3,19 @@ import Img from "gatsby-image"
 
 
 
-export default function Team({que}) {
+export default function NavbarAbout({que}) {
     return (
-            <div className="container-fluid py-3">
-                    <div className="row">
-                    {que.team.edges.map(({ node }) => {
-                        return(
-                            <div key={node.name1} className="col-xl-2 mx-auto">
-                                <div className="row d-flex justify-content-xl-center align-items-center">
-                                    <Img fixed={node.memberPhoto.fixed} />
-                                    <a href="https://www.linkedin.com/in/annamalai-palaniappan-025a7a17/">
-                                            <h3 className="text-center">{node.name1}</h3>
-                                        </a>
-                                    <p className="justify-content-md-center py-3 aqua bold">{node.role}</p>
-                                </div>
-                            </div>
-                    
-                        );
-                    })} 
+            <div className="container-fluid mx-auto py-3 navabout">
+                    <div className="row mx-auto ">
+                        <div className="col-4 text-center">
+                            <a href="#profile" ><span>Company Profile</span></a>
+                        </div>
+                        <div className="col-4 text-center">
+                            <a href="#mission" ><span>Our Mission & Vision</span></a>
+                        </div>
+                        <div className="col-4 text-center">
+                            <a href="#team" ><span>Our Team</span></a>
+                        </div>
 
                     </div>
             </div>
