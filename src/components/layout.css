@@ -120,7 +120,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .sticky-top{
-  top:15%
+  background-color: white;
 }
 
 /* youtube */
@@ -152,3 +152,6 @@ h1,h2,h3,h4,h5,h6{
   
 }
 
+.profileList {
+   list-style-type: square;
+}
