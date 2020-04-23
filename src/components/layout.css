@@ -103,13 +103,31 @@ h1,h2,h3,h4,h5,h6{
 .contactUsBackground{
   width: 100%;
   height:90vh;
-  background-size: 100% 100%;
+  background-size: contain;
   padding-top: 20px;
   padding-right: 30px;
   padding-bottom: 50px;
   padding-left: 5px;
   margin-bottom: 40px ;
 }
+
+.contactUsPlainBackground{
+  width: 100%;
+  height:30vh;
+  /* background-size: 100% 100%; */
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 5px;
+  margin-bottom: 40px ;
+}
+
+
+.contactUsIcon{
+  padding-right: 15vh;
+  padding-left: 85vh;
+}
+
 .banner{
   background: radial-gradient(#00000012, #00000094);
 }
@@ -162,3 +180,87 @@ h1,h2,h3,h4,h5,h6{
   
 }
 
+/* .ani {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+} */
+
+
+
+.ani {
+  /* width: 50px;
+  height: 50px; */
+  /* top : 40px;
+  left: 40px; */
+  /* top : 5vh;
+  width :20vh;
+  height: 7vh; */
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  /* animation-iteration-count: infinite; */
+}
+
+.aniPhn {
+
+  top : 5vh;
+  width :20vh;
+  height: 7vh;
+  right : 11vh;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+
+}
+
+
+@keyframes example {
+  0%   {top:1vh;}
+  25%  { top:5vh;}
+  50%  { top:1vh;}
+  75%  { top:5vh;}
+  100% { top:1vh;}
+}
+
+
+
+
+/* .aniPhn {
+
+  top : 5.5vh;
+  width :20vh;
+  height: 7vh;
+  right : 11vh;
+  position: relative;
+  animation-name: shake;
+  animation-duration: 5s;
+  animation: shake 0.5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+} */
