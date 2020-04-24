@@ -28,15 +28,28 @@ const AboutPage = ({data}) => (
                     </div>
                 </div> */}
                 <div className="col-lg-10 mx-auto" id="rightcol">
-                    <NavbarAbout/>
+                          <div className="container-fluid sticky-top mx-auto py-3 ">
+                              <div className="row mx-auto ">
+                                  <div className="col-4 text-center">
+                                      <a href="#profile" ><span>Company Profile</span></a>
+                                  </div>
+                                  <div className="col-4 text-center">
+                                      <a href="#mission"><span>Our Mission & Vision</span></a>
+                                  </div>
+                                  <div className="col-4 text-center">
+                                      <a href="#team" ><span>Our Team</span></a>
+                                  </div>
+
+                              </div>
+                      </div>
                     <Banner header="Company Profile" id="profile"/>
                     <YouTube className="youtube" /> {/* Got the info for custom Youtube responsive component from https://www.youtube.com/watch?v=EGZS58z4DSQ */}
                     <Profile />
                     <Timeline que={data} />
-                    <Mission id="mission"/> 
-                    
-                    
-                    <Banner header="Management Team" id="team"/>
+                    <div id="mission"></div>
+                    <Mission/> 
+                    <div id="team"></div>
+                    <Banner header="Management Team"/>
                     <Team que={data} />
                     
                 </div>
