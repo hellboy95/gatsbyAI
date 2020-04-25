@@ -16,7 +16,7 @@ export default function navbar () {
                         <Nav.Link className="px-5 text-uppercase text-dark" href="/">Home</Nav.Link>
                         <Nav.Link className="px-5 text-uppercase text-dark" href="/about">About</Nav.Link>
                         <NavDropdown className="px-5 text-uppercase text-dark" title="Products" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/glasstop">Glasstop Stoves</NavDropdown.Item>
+                            <NavDropdown.Item href="../Product/glasstop">Glasstop Stoves</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/steel">Stainless Steel Stoves</NavDropdown.Item>
                         </NavDropdown>
