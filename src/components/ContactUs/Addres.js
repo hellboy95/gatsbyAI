@@ -2,86 +2,40 @@
 
 import React from 'react'
 
-
-
-
-
-
-
-export default function Address({ header,details }) {
-
+export default function Address({ addressDetails }) {
     return (
-
-//         <div className="container-fluid banner py-3">
-
-//             <div className="row">
-
-//                 <div className="col text-center py-2 mx-auto">
-
-//                     <h3 className="font-weight-bold text-uppercase text-center">{header}</h3>
-//     <h4 className="text-uppercase text-center">{details}</h4>
-
-//                 </div>
-//                 <div className="col text-center py-2 mx-auto">
-
-// <h3 className="font-weight-bold text-uppercase text-center">{header}</h3>
-// <h4 className="text-uppercase text-center">{details}</h4>
-
-// </div>
-// <div className="col text-center py-2 mx-auto">
-
-// <h3 className="font-weight-bold text-uppercase text-center">{header}</h3>
-// <h4 className="text-uppercase text-center">{details}</h4>
-
-// </div>
-
-
-//             </div>
-
-//         </div>
-
-<div>
-
-<div className="row">
-
-    {/* <div >
-
-        <h3 >{header}</h3>
-<h4 >{details}</h4>
-
-    </div> */}
-
-<div className="col-lg-10 col-sm-8 col-xs-4 mx-auto text-center">
-                        <p className="lead text-dark mb-5">
-                            We are a family owned OEM manufacturing company producing high quality products for nation leading kitchen applicance brands. Drawing from 30 years of manufacturing experience, we bring
-                            unparalled technical expertise and proven management practices to deliver the best results. 
-                        </p>
+        <div>
+            <div className="row">
+                {addressDetails.data.contactUsAddress.edges.map(({ node }) => {
+                    return (
+                        <div key={node.header1} className="col-lg-4 col-sm-3.5 mx-auto text-center py-5">
+                            <h1>{node.header1}</h1>
+                            <h3>{node.header2}</h3>
+                            <p className="lead text-dark mb-5">{node.address.address}<br />
+                                Telephone:{node.telephoneNumber}
+                            </p>
                         </div>
-
-                        <div className="col-10 col-sm-8 mx-auto text-center">
-                        <p className="lead text-dark mb-5">
-                            We are a family owned OEM manufacturing company producing high quality products for nation leading kitchen applicance brands. Drawing from 30 years of manufacturing experience, we bring
-                            unparalled technical expertise and proven management practices to deliver the best results. 
-                        </p>
+                    );
+                })}
+                <div className="col-lg-12 col-sm-9 mx-auto text-center py-4">
+                    <h3>Government Registration Numbers - GSTIN No: 33AAPFA0733K1ZJ</h3>
+                </div>
+                <div className="col-lg-12 col-sm-10 mx-auto text-center py-5">
+                    <h1>Chief Management Team:</h1>
+                </div>
+                {addressDetails.data.contactUsTeam.edges.map(({ node }) => {
+                    return (
+                        <div key={node.name} className="col-lg-4 col-sm-3.5 mx-auto text-center">
+                            <h2>{node.name}</h2>
+                            <h3>({node.position})</h3>
+                            <p className="lead text-dark mb-5">
+                                Email :{node.email} <br />
+                                Mobile :{node.mobile}
+                            </p>
                         </div>
-    {/* <div className="col text-center py-2 mx-auto">
-
-<h3 className="font-weight-bold text-uppercase text-center">{header}</h3>
-<h4 className="text-uppercase text-center">{details}</h4>
-
-</div>
-<div className="col text-center py-2 mx-auto">
-
-<h3 className="font-weight-bold text-uppercase text-center">{header}</h3>
-<h4 className="text-uppercase text-center">{details}</h4>
-
-</div> */}
-
-
-</div>
-
-</div>
-
+                    )
+                })}
+            </div>
+        </div>
     )
-
 }
