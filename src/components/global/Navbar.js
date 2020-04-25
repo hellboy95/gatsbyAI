@@ -1,77 +1,30 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby'
 import logo from '../../images/logo.png'
+import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 
 
 
-export default class Navbar extends Component {
+export default function navbar () {
+    return (
+        <Container>
+            <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+                <Navbar.Brand href="/"><img src={logo} alt="logo"/></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mx-auto">
+                        <Nav.Link className="px-5 text-uppercase text-dark" href="/">Home</Nav.Link>
+                        <Nav.Link className="px-5 text-uppercase text-dark" href="/about">About</Nav.Link>
+                        <NavDropdown className="px-5 text-uppercase text-dark" title="Products" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="../Product/glasstop">Glasstop Stoves</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/steel">Stainless Steel Stoves</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link className="px-5 text-uppercase text-dark" href="/contact">Contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+        </Container>
+    )}
 
-state ={
-    navbarOpen: false,
-    css:'collapse navbar-collapse',
-    links:[
-        {
-            id:1,
-            path:'/',
-            text:'Home'
-        },
-        {
-            id:2,
-            path:'/about',
-            text:'About'
-        },
-        {
-            id:3,
-            path:'/Product',
-            text:'Product'
-        },
-        {
-            id:4,
-            path:'/Infra',
-            text:'Infrastructure'
-        },
-        {
-            id:5,
-            path:'/contact',
-            text:'Contact'
-        },
-    ]
 
-};
-
-navbarHandler = () => {
-    this.state.navbarOpen?this.setState({navbarOpen:false,css:"collapse navbar-collapse"}):this.setState({navbarOpen:true,css:"collapse navbar-collapse show"});
-};
-    render() {
-        return (
-            <div className="container-fluid">
-                
-                <nav className="navbar navbar-expand-lg navbar-light ">  
-                        <Link to="/" className="navbar brand" >
-                            <img src={logo} alt="logo"/>
-                        </Link>
-                        <button className="navbar-toggler" type="button" onClick={this.navbarHandler}>
-                            <span className="navbar-toggler-icon"/>
-                        </button>
-                        <div className={this.state.css}>
-                            <ul className="navbar-nav mx-auto">
-                                {
-                                    this.state.links.map( link =>{
-                                        return(
-                                            <li key={link.id} className="nav-item px-5">
-                                                <Link to={link.path} className="nav-link text-uppercase text-dark">
-                                                    {link.text}
-                                                </Link>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </div>
-
-            </nav>
-            </div>
-           
-        )
-    }
-}
