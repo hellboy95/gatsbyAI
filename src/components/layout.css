@@ -151,8 +151,23 @@ h1,h2,h3,h4,h5,h6{
   
 }
 
+.ani {
+  position: relative;
+  animation-name: iconAnimation;
+  animation-duration: 5s;
+}
+
+@keyframes iconAnimation {
+  0%   {top:1vh;}
+  25%  { top:5vh;}
+  50%  { top:1vh;}
+  75%  { top:5vh;}
+  100% { top:1vh;}
+}
+
+
 .profileList {
-   list-style-type: square;
+  list-style-type: square;
 }
 
 .dropdown-menu {
