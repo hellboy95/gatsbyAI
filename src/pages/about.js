@@ -1,32 +1,23 @@
 import React from "react"
-import { Link ,graphql, useStaticQuery} from "gatsby"
+import { graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
 import Profile from "../components/About/Profile"
-import Info from "../components/Home/Info"
-import Characteristics from "../components/Home/Characteristics"
 import YouTube from "../components/About/YouTube"
 import Banner from "../components/About/Banner"
 import Timeline from "../components/About/Timeline"
 import Mission from "../components/About/Mission"
 import Team from "../components/About/Team"
-import NavbarAbout from "../components/About/NavbarAbout"
+
+
 const AboutPage = ({data}) => (
   <Layout>
     <SEO title="About" />
         <div className="container-fluid">
             <div className="row">
-                {/*} <div className="col-lg-2" id="leftcol">
-                    <div className="sticky-top leftCol ">
-                        <ul >
-                            <li ><a href="#profile" className="leftSticky">Company Profile</a></li>
-                            <li><a href="#Team" className="leftSticky">Management Team</a></li>
-                        </ul>
-                    </div>
-                </div> */}
                 <div className="col-lg-10 mx-auto" id="rightcol">
                           <div className="container-fluid sticky-top mx-auto py-3 ">
                               <div className="row mx-auto ">

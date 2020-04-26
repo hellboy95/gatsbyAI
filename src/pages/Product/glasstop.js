@@ -11,12 +11,8 @@ const GlasstopPage = ({data}) => (
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-12">
-
-                    <Twobgt que={data} header="Two Burner"/>
                     <Twobgt que={data} header="Two Burner"/>
                 </div>
-                
-                
             </div>
         </div>
     
