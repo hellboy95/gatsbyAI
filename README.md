@@ -12,4 +12,4 @@ Checkout the website for OEM Manufacturers Avinash Industries, built on a JAMSta
  
 Netlify site: https://gastby-ai-ajay.netlify.app/
  
-![AISite](/images/AISite.png)
+![AISite](/images/AIsite.png)
